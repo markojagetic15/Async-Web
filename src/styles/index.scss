@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Swansea-bold';
+  src: local('Swansea'), url("../assets/fonts/Swansea-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Swansea';
+  src: local('Swansea'), url("../assets/fonts/Swansea.ttf") format('truetype');
+}
+body{
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+  cursor: url("../assets/cursor.png"), default;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+a:focus, a:active, a:visited, a:checked{
+  outline:0;
+  box-shadow: 0;
+  cursor: url("../assets/cursor.png"), default;
+}
+a{
+  text-decoration: none;
+  color: #525252 ;
+  &:hover{
+    cursor: url("../assets/cursor.png"), default;
+  }
+}
+button:hover{
+  cursor: url("../assets/cursor.png"), default;
+}
+
+
