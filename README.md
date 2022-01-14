@@ -1,5 +1,7 @@
 # How to start up the project
 
-Fork the repo and run npm install. When that's finished run npm start
+1. Clone the project to your local machine
+2. run npm install
+3. when that's finished run npm start
 
 
