@@ -15,6 +15,8 @@ function Form(props) {
       timer: 3000,
     });
   }
+  event.preventDefault();
+  document.getElementById("form").reset();
   function handleChange(event) {
     setAdd(event.target.value);
   }
