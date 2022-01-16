@@ -6,20 +6,22 @@ function Form(props) {
   let [add, setAdd] = useState();
   const [a] = useState(Math.floor(Math.random() * 10));
   const [b] = useState(Math.floor(Math.random() * 10));
-  function handleSubmit() {
+  function handleSubmit(event) {
     Swal.fire({
       position: "top",
       icon: "success",
-      title: "Your have successfully sent a message",
-      showConfirmButton: false,
+      title: "You have successfully sent a message",
+      showConfirmButton: true,
       timer: 3000,
     });
+    event.preventDefault();
+    document.getElementById("form").reset();
   }
   function handleChange(event) {
     setAdd(event.target.value);
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} id="form">
       <div className="row">
         <div className="searchformfld form-group col-xl-6">
           <input

@@ -11,6 +11,7 @@ import Careers from "../pages/Careers.js";
 import Team from "../pages/Team.js";
 import Blog from "../pages/Blog.js";
 import PositionInfo from "../pages/PositionInfo.js";
+import ServiceInfo from "../pages/ServiceInfo.js";
 import LINK from "./Link.js";
 
 //Assets
@@ -32,7 +33,7 @@ function NavBar() {
           <div className="grid-item-1 col-xl-4 col-md-2 col-sm-1 col-1">
             <img src={NavImage} alt=""></img>
           </div>
-          <div className="grid-item-2 col-xl-4 col-md-7 col-sm-7 col-8">
+          <div className="grid-item-2 col-xl-4 col-md-7 col-sm-7 col-7">
             <ul>
               <li>
                 <Link to="/" id="link" onClick={closeNav}>
@@ -61,7 +62,7 @@ function NavBar() {
               </li>
             </ul>
           </div>
-          <div className="grid-item-3 col-xl-4 col-md-3 col-sm-4 col-3">
+          <div className="grid-item-3 col-xl-4 col-md-3 col-sm-4 col-4">
             <ul>
               <li>
                 <Link to="/careers" onClick={closeNav}>
@@ -91,6 +92,7 @@ function NavBar() {
           <Route exact path="/team" element={<Team />}></Route>
           <Route exact path="/blog" element={<Blog />}></Route>
           <Route exact path="/careers/:id" element={<PositionInfo />}></Route>
+          <Route exact path="/services/:id" element={<ServiceInfo />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

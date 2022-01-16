@@ -14,10 +14,11 @@ form{
 .captcha{
     background-color: transparent;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-left: 10px;
     color: #1d1d1d;
+    width: 50%;
     &:active, &:focus{
         outline: none;
     }
@@ -35,6 +36,7 @@ form{
 }
 .button{
     text-align: center;
+    margin-top: 10px;
     .btn{
         font-family: "Swansea-bold", sans-serif;
         background-color:#1d1d1d ;
@@ -76,6 +78,7 @@ form{
     padding-left: 10px;
     top:15px;
     cursor: text;
+    z-index: 0;
 }
 .searchformfld input:focus + label,.searchformfld input:not(:placeholder-shown) + label{
     opacity:1;

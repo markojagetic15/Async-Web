@@ -5,6 +5,7 @@
         position: relative;
         img{
             width:100%;
+            filter: brightness(70%)
         }
         .job-title{
             position: absolute;
@@ -14,7 +15,6 @@
             color: white;
             font-size: 7vh;
             font-family: "Swansea-bold", sans-serif;
-            -webkit-text-stroke: 1.2px black;
         }
     }
     .desc{
@@ -27,7 +27,6 @@
             text-align: left;
             p{
                 color:#525252;
-                width: 75%;
             }
         }
         h1{
@@ -47,7 +46,7 @@
             color: white;
         }
         .row{
-            width: 70%;
+            width: 80%;
             margin: auto;
             padding: 5% ;
             ul{
