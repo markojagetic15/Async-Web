@@ -17,6 +17,8 @@ function Form(props) {
     event.preventDefault();
     document.getElementById("form").reset();
   }
+  event.preventDefault();
+  document.getElementById("form").reset();
   function handleChange(event) {
     setAdd(event.target.value);
   }
