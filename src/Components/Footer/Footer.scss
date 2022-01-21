@@ -1,0 +1,29 @@
+@import "../../assets/vars";
+
+.footer-container {
+    background-color: $black;
+    text-align: center;
+    padding: 3% 0%;
+
+    ul {
+        list-style: none;
+        padding: 0px;
+
+        li {
+            a {
+                color: $grey;
+                line-height: 30px;
+                margin: 5px 30px;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    p {
+        color: $grey;
+        padding-top: 2%;
+    }
+}

@@ -1,0 +1,37 @@
+@import "../../../assets/vars";
+
+.contact-container {
+    width: 80%;
+    margin: 200px auto;
+
+    .page-title {
+        font-size: 4em;
+        font-family: $bold;
+        color: $black;
+        margin-left: 2vw;
+    }
+
+    p {
+        font-size: 1.4em;
+        color: $light-black;
+        margin: 3vw 0vw 6vw 2vw;
+        max-width: 50vw;
+    }
+
+    .contact-outline {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $grey;
+        color: white;
+        position: absolute;
+        top: 18%;
+        right: -10vh;
+        font-size: 130px;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .contact-outline {
+        display: none;
+    }
+}

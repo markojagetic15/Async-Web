@@ -1,0 +1,46 @@
+@import "../../assets/vars";
+
+.btn-arrow {
+  color: $grey;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    color: white;
+
+    svg {
+      opacity: 1;
+      right: -3rem;
+    }
+
+    span {
+      transform: translate3d(-1rem, 0, 0);
+    }
+  }
+
+  &:focus,
+  &:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+  }
+
+  span {
+    display: inline-block;
+    transition: all 300ms ease-out;
+    font-size: 3rem;
+    font-family: $bold;
+
+    svg {
+      position: absolute;
+      width: 1.1em;
+      font-size: 26px;
+      right: 0;
+      opacity: 0;
+      top: 60%;
+      transform: translateY(-50%);
+      transition: all 300ms ease-out;
+    }
+  }
+}

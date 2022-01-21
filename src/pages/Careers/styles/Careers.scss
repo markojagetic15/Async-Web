@@ -1,0 +1,66 @@
+@import '../../../assets/vars';
+
+.careers-container {
+    width: 80%;
+    margin: 200px auto;
+
+    h1:first-child {
+        font-size: 7vh;
+        font-family: $bold;
+        color: $black;
+    }
+
+    .careers-outline {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $grey;
+        position: absolute;
+        color: white;
+        top: 18%;
+        right: -10vh;
+        font-size: 130px;
+    }
+
+    img {
+        width: 100%;
+        margin-top: 10vh;
+    }
+
+    p {
+        color: $blue;
+    }
+
+    .careers-desc {
+        width: 80%;
+        margin: 10vh auto;
+
+        h1,
+        h4 {
+            font-family: $bold;
+            padding: 10px 0px;
+        }
+
+        .col-xl-6 {
+            padding: 40px 20px;
+
+            p {
+                color: $light-black;
+                width: 70%;
+            }
+
+        }
+    }
+
+    .positions {
+        text-align: center;
+
+        h1 {
+            margin: 10vh 0;
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .careers-outline {
+        display: none;
+    }
+}

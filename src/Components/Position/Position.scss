@@ -1,0 +1,58 @@
+@import "../../assets/vars";
+
+.position {
+    border-top: solid 1px $light-grey;
+    margin: 0px;
+    vertical-align: center;
+    position: relative;
+    height: 125px;
+    align-items: center;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 100%;
+        transition: 0.4s all ease;
+        background-color: $black;
+        left: 0;
+        z-index: -1;
+    }
+
+    p {
+        color: $light-black;
+    }
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+
+        p {
+            color: $white;
+        }
+
+        &:before {
+            width: 100%;
+            transition: 0.4s all ease;
+        }
+    }
+
+    p,
+    h4,
+    h6 {
+        margin: 0px;
+    }
+
+    h4 {
+        font-family: $bold;
+    }
+
+    svg {
+        width: 2em;
+        font-size: 26px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

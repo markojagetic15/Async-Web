@@ -1,0 +1,47 @@
+@import "../../assets/vars";
+
+.location-container {
+    font-family: $reg;
+    background-color: $white;
+    color: $black;
+    margin-top: 30%;
+    padding: 50px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -15px;
+        left: -15px;
+        background: $black;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover:before {
+        transform: scale(21);
+    }
+
+    h3 {
+        font-family: $bold;
+    }
+
+    &:hover {
+        span {
+            transition: all 0.3s ease-out;
+            color: $white;
+        }
+
+        h3 {
+            transition: all 0.3s ease-out;
+            color: $white;
+        }
+    }
+}

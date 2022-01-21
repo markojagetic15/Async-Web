@@ -1,0 +1,143 @@
+@import "../../../assets/vars";
+
+.service-container {
+    margin-top: -30px;
+    text-align: center;
+
+    .title {
+        position: relative;
+
+        img {
+            width: 100%;
+            filter: brightness(70%);
+            height: 500px;
+        }
+
+        .job-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 7vh;
+            font-family: "Swansea-bold", sans-serif;
+        }
+    }
+
+
+    .service-description {
+        max-width: 80%;
+        margin: auto;
+        margin-top: 5%;
+
+        div:first-child>p {
+            color: $blue;
+        }
+
+        &>div {
+            padding: 5%;
+            text-align: left;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                padding: 10px;
+                font-size: 1.2em;
+                position: relative;
+                font-family: $bold;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background-color: $blue;
+                    width: 10px;
+                    height: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -5%;
+                }
+            }
+        }
+    }
+
+    .work {
+
+        h1 {
+            font-family: $bold;
+            font-size: 5em;
+        }
+
+        .row {
+            width: 65%;
+            margin: auto;
+
+            div>a:nth-of-type(n) {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $white;
+                    display: none;
+                    pointer-events: none;
+                }
+
+                img {
+                    margin: 2vh;
+                    transition: filter 0.5s ease-in-out;
+                    display: inline;
+
+                    &:hover {
+                        filter: brightness(40%);
+
+                        &~h2 {
+                            transition: display 0.5s;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .links_to_other_services {
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+
+        div {
+            display: inline-block;
+            width: 50%;
+            position: relative;
+
+            h3 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $white;
+                pointer-events: none;
+            }
+        }
+
+        img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(20%);
+            transition: filter 0.5s linear;
+
+            &:hover {
+                filter: brightness(60%);
+            }
+        }
+    }
+}

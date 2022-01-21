@@ -1,0 +1,142 @@
+@import "../../assets/vars";
+
+form {
+    background-color: $white;
+    padding: 50px;
+
+    //submit button
+    .button {
+        text-align: center;
+        margin-top: 10px;
+
+        .btn {
+            font-family: $bold;
+            background-color: $black;
+            color: $white;
+            padding: 20px;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            border: none;
+
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -30px;
+                left: -30px;
+                background: $light-grey;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                transform: scale(1);
+                transform-origin: 50% 50%;
+                transition: transform 0.3s ease-out;
+            }
+
+            &:hover {
+                border: none;
+                color: $black;
+
+                &:before {
+                    transform: scale(21);
+                }
+            }
+        }
+    }
+
+
+    //input and input label
+    .searchformfld {
+        position: relative;
+        padding: 15px;
+        margin: 15px 0px;
+
+        .form-control {
+            background-color: transparent;
+            border: 0px;
+            border-bottom: 1px solid $light-grey;
+            border-radius: 0px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+
+        label {
+            position: absolute;
+            padding-left: 10px;
+            top: 15px;
+            z-index: 0;
+            pointer-events: none;
+            cursor: text;
+
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding-left: 10px;
+
+            &:focus {
+                border-bottom: 1px solid $black;
+
+                &+label {
+                    opacity: 0.8;
+                    transform: scale(.9) translateY(-100%) translateX(-10px);
+                    color: $black;
+
+                }
+            }
+        }
+
+        input,
+        label {
+            transition: all 0.2s;
+            transition-timing-function: ease;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+            opacity: 0.5;
+        }
+    }
+
+    //captcha
+    .captcha {
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-left: 10px;
+        color: $black;
+        width: 10%;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+.searchformfld input:focus+label,
+.searchformfld input:not(:placeholder-shown)+label,
+.searchformfld textarea:focus+label,
+.searchformfld textarea:not(:placeholder-shown)+label {
+    opacity: 1;
+    transform: scale(.9) translateY(-100%) translateX(-10px);
+    color: $black;
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
